@@ -1,12 +1,10 @@
+import { IDanhSach } from "../typeCommon/itemType";
 export interface IItem {
-    id?:string
+  name: string;
 }
 
-export interface IDataVe {
-    list : IItem[]
+export interface IDataVe extends Pick<IItem, "name">, Pick<IDanhSach, "id"> {
+  age: number;
 }
 
-export interface IDataDi {
-    giGiDo?: string 
-}
-
+export type IDataDi = Partial<Pick<IItem, "name">> & Pick<IDanhSach, "page">;
