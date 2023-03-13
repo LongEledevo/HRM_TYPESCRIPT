@@ -1,6 +1,7 @@
 //api:
+import {IDataVe} from '../../apis/ItemApi/configType'
 
-interface IItem {
+interface IItem { //tại sao k import từ api
     id?: string|unknown,
 }
 
@@ -14,11 +15,11 @@ interface IBase {
 
 
 export interface IItemReducer extends IBase  {
-    item: IItem,
+    item: IDataVe,
 }
 
 export interface IItemReducers extends IBase {
-    list: IItem[]| []
+    list: IDataVe[]| []
 }
 
 

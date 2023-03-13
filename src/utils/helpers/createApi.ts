@@ -22,7 +22,7 @@ export default function createApi<T, R>({
       method,
       data: null,
     };
-    // const { paths, payload, queries } = params;
+
     if (params?.paths) {
       config.url = Object.keys(params.paths).reduce(
         (prev, curr) => prev.replace(`:${curr}`, params.paths[curr]),

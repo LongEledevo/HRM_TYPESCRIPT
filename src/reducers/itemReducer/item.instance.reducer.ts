@@ -6,7 +6,9 @@ const { ItemTypes } = actionTypes
   
     const INITIAL_STATE : IItemReducer  = {
         item: {
-            id: null
+            id: '',
+            age:0,
+            name:''
         },
         isFetching: false,
         isError: false,
